@@ -4,5 +4,6 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_net_nat_changer_domain_Change" modelAttribute="change" path="/changes" versionField="Version" z="oDI4xNoRrZnND9NVzwoulyMemz4=">
         <field:input field="description" id="c_net_nat_changer_domain_Change_description" z="OBG+bej7Llj0bVLDMIhPuiZ2xHk="/>
+        <field:select field="addedPerson" id="c_net_nat_changer_domain_Change_addedPerson" itemValue="id" items="${people}" path="/people" z="qKPESGFwN/gqILph1LLSWwPw5uo="/>
     </form:update>
 </div>

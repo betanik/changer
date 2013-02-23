@@ -9,4 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RooWebScaffold(path = "people", formBackingObject = Person.class)
 public class PersonController {
+
+    public Person initializePerson() {
+        return new Person();
+    }
 }

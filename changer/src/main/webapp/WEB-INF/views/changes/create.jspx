@@ -4,6 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_net_nat_changer_domain_Change" modelAttribute="change" path="/changes" render="${empty dependencies}" z="BDVYbXkRRytGTflB6wmXH/+mdyI=">
         <field:input field="description" id="c_net_nat_changer_domain_Change_description" z="OBG+bej7Llj0bVLDMIhPuiZ2xHk="/>
+        <field:select field="addedPerson" id="c_net_nat_changer_domain_Change_addedPerson" itemValue="id" items="${people}" path="/people" z="qKPESGFwN/gqILph1LLSWwPw5uo="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_net_nat_changer_domain_Change" render="${not empty dependencies}" z="a00AJW/dvCuGyQ1pt7CpRmqEX3I="/>
 </div>

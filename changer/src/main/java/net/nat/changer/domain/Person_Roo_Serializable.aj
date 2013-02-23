@@ -3,11 +3,13 @@
 
 package net.nat.changer.domain;
 
-import javax.persistence.Entity;
+import java.io.Serializable;
 import net.nat.changer.domain.Person;
 
-privileged aspect Person_Roo_Jpa_Entity {
+privileged aspect Person_Roo_Serializable {
     
-    declare @type: Person: @Entity;
+    declare parents: Person implements Serializable;
+    
+    private static final long Person.serialVersionUID = 1L;
     
 }

@@ -4,6 +4,7 @@
 package net.nat.changer.domain;
 
 import net.nat.changer.domain.Change;
+import net.nat.changer.domain.Person;
 
 privileged aspect Change_Roo_JavaBean {
     
@@ -13,6 +14,14 @@ privileged aspect Change_Roo_JavaBean {
     
     public void Change.setDescription(String description) {
         this.description = description;
+    }
+    
+    public Person Change.getAddedPerson() {
+        return this.addedPerson;
+    }
+    
+    public void Change.setAddedPerson(Person addedPerson) {
+        this.addedPerson = addedPerson;
     }
     
 }

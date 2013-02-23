@@ -3,11 +3,11 @@
 
 package net.nat.changer.domain;
 
-import javax.persistence.Entity;
-import net.nat.changer.domain.Person;
+import net.nat.changer.domain.Changeable;
+import org.springframework.beans.factory.annotation.Configurable;
 
-privileged aspect Person_Roo_Jpa_Entity {
+privileged aspect Changeable_Roo_Configurable {
     
-    declare @type: Person: @Entity;
+    declare @type: Changeable: @Configurable;
     
 }

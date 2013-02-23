@@ -4,5 +4,6 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_net_nat_changer_domain_Change" object="${change}" path="/changes" z="mEJEWbVD74c2Dchcfz1fakz0NIg=">
         <field:display field="description" id="s_net_nat_changer_domain_Change_description" object="${change}" z="YJ4ZCZitB/MFgkmxaOlVF7e4S2I="/>
+        <field:display field="addedPerson" id="s_net_nat_changer_domain_Change_addedPerson" object="${change}" z="ujkHyboZr7GtuRxJwqXJRVzZDJo="/>
     </page:show>
 </div>

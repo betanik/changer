@@ -1,21 +1,26 @@
 <div xmlns:spring="http://www.springframework.org/tags" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="http://www.springframework.org/tags/form"  version="2.0">
   <jsp:directive.page contentType="text/html;charset=UTF-8" />
   <jsp:output omit-xml-declaration="yes" />
-  <spring:message var="title" code="webflow_enterPersonDetails_title" htmlEscape="false" />
+  <spring:message var="title" code="webflow_reviewChanges_title" htmlEscape="false" />
   <util:panel id="title" title="${title}">
     <h1>${fn:escapeXml(title)}</h1>
     <p>
-      <spring:message code="webflow_enterPersonDetails_message" />
+      <spring:message code="webflow_reviewChanges_message" />
     </p>
-    <form:form modelAttribute="person" method="POST">
-      <field:input field="name" id="c_net_nat_changer_domain_Person_name" z="X5G9Dbnt2nelos6npnsteYFxgPY="/>
     
+    <p>
+    Hai: ${change.description}
+    Hm: ${change.addedPerson.name}
+    </p>
+
+    
+    <form method="POST">    
       <div class="submit">
         <spring:message var="cancel" code="button_cancel" htmlEscape="false" />
-        <spring:message var="proceed" code="button_proceed" htmlEscape="false" />
+        <spring:message var="submit" code="button_submit" htmlEscape="false" />
         <input type="submit" id="cancel" name="_eventId_cancel" value="${fn:escapeXml(cancel)}" />
-        <input type="submit" id="proceed" name="_eventId_proceed" value="${fn:escapeXml(proceed)}" />
+        <input type="submit" id="finish" name="_eventId_submit" value="${fn:escapeXml(submit)}" />
       </div>
-    </form:form>
+    </form>
   </util:panel>
 </div>

@@ -7,6 +7,7 @@ import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import net.nat.changer.domain.Change;
+import net.nat.changer.domain.Person;
 import net.nat.changer.web.ChangeController;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -86,6 +87,7 @@ privileged aspect ChangeController_Roo_Controller {
     
     void ChangeController.populateEditForm(Model uiModel, Change change) {
         uiModel.addAttribute("change", change);
+        uiModel.addAttribute("people", Person.findAllPeople());
     }
     
     String ChangeController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

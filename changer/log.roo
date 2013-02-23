@@ -22,3 +22,24 @@ web mvc all --package net.nat.changer.web
 web flow --flowName addPerson
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-02-23 07:07:50
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-02-23 14:01:51
+focus --class ~.domain.Change
+// [failed] field set --fieldName addedEntities --type Object
+// [failed] field set --fieldName addedEntities --type java.lang.Object
+help
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-02-23 15:09:51
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-02-23 15:10:04
+entity jpa --class ~.domain.Changeable --abstract true
+entity jpa --class ~.domain.Foo --extends ~.domain.Changeable
+focus --class ~.domain.Change
+field set --fieldName addedEntities --type ~.domain.Changeable
+field set --fieldName addedPeople --type ~.domain.Person
+web mvc all --package net.nat.changer.web
+web mvc all --package net.nat.changer.web
+field other --class ~.domain.Person --fieldName addedPerson --type ~.domain.Person
+focus --class ~.domain.Change
+field other --class ~.domain.Person --fieldName addedPerson --type ~.domain.Person
+focus --class ~.domain.Change
+field reference --fieldName addedPerson --type ~.domain.Person --cardinality MANY_TO_ONE
+field reference --fieldName addedPerson --type ~.domain.Person --cardinality MANY_TO_ONE
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-02-23 19:37:02
