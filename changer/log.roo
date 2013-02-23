@@ -1,0 +1,24 @@
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-02-19 22:07:28
+project --topLevelPackage net.nat.changer --projectName changer --java 6 --packaging JAR
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-02-19 22:07:47
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-02-19 22:08:04
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-02-21 16:26:56
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-02-21 19:30:37
+hint
+jpa setup --database H2_IN_MEMORY --provider HIBERNATE
+hint
+hint
+entity jpa --class ~.domain.Person
+field string --fieldName name
+web mvc setup 
+hint
+hint web mvc
+web mvc all --package ~.web
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-02-22 09:44:26
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-02-22 19:17:54
+entity jpa --class ~.domain.Change
+field string description
+web mvc all --package net.nat.changer.web
+web flow --flowName addPerson
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-02-23 07:07:50
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-02-23 14:01:51

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_net_nat_changer_domain_Change" items="${changes}" z="kFa/cP3E00duvXz4SlX087kz+iw=">
+        <table:table data="${changes}" id="l_net_nat_changer_domain_Change" path="/changes" z="WxJpGb1sgLWrQ2ysaiPClUxFdbU=">
+            <table:column id="c_net_nat_changer_domain_Change_description" property="description" z="wK7UiiC8lmDwrTv1TXTwx/vM9dI="/>
+        </table:table>
+    </page:list>
+</div>

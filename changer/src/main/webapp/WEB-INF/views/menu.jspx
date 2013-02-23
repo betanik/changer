@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_person" z="Cz66KzcF6GdyygpbYfiE+EkFFFA=">
+            <menu:item id="i_person_new" messageCode="global_menu_new" url="/people?form" z="IlD8NFD64X8egaRrgHbQeWKT68I="/>
+            <menu:item id="i_person_list" messageCode="global_menu_list" url="/people?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MFjeqYeiMgVzk2P/OWfFpXZhhS4="/>
+        </menu:category>
+        <menu:category id="c_change" z="run8j84mXMshnuse+uHZB15s5mk=">
+            <menu:item id="i_change_new" messageCode="global_menu_new" url="/changes?form" z="6+/rNAef1yAyIBSR9jBALp5w1No="/>
+            <menu:item id="i_change_list" messageCode="global_menu_list" url="/changes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="V5/N3uoLppo4qCp63lILqfaIZmY="/>
+        </menu:category>
+        <menu:category id="c_flows" z="5igpkb/e+HPIN8iUErvmM38Eqqk=">
+            <menu:item id="i_flows_addperson" messageCode="webflow_menu_enter" url="/addPerson" z="evoWb9vYrbvaqr82sm9WXunRKOQ="/>
+        </menu:category>
+    </menu:menu>
+</div>
