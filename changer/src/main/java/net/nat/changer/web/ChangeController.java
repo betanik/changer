@@ -13,6 +13,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ChangeController {
 
     public Change initializeChange() {
-        return new Change();
+        Change change = new Change();
+        org.hibernate.Session session = (org.hibernate.Session) change.entityManager().getDelegate();
+        session.setFlushMode(org.hibernate.FlushMode.MANUAL);
+		return change;
+    }
+    
+    public void persistChange(Change change) {
+        org.hibernate.Session session = (org.hibernate.Session) change.entityManager().getDelegate();
+        session.setFlushMode(org.hibernate.FlushMode.MANUAL);
+        change.persist();
+        System.out.println(change);
     }
 }

@@ -32,7 +32,7 @@
 	
     <view-state id="reviewChanges" view="addPerson/reviewChanges" model="flowScope.change">
     	<transition to="end-state" on="submit">
-			<evaluate expression="flowScope.change.persist()"></evaluate>
+			<evaluate expression="changeController.persistChange(flowScope.change)"></evaluate>
     	</transition>
     </view-state>
 </flow>
