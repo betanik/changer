@@ -9,8 +9,10 @@
     </p>
     
     <p>
-    Hai: ${change.description}
-    Hm: ${change.addedPerson.name}
+    Change description: ${change.description}
+    </p>
+    <p>
+    Person:  ${change.addedPerson}
     </p>
 
     

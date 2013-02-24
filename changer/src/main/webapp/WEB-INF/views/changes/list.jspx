@@ -4,10 +4,9 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_net_nat_changer_domain_Change" items="${changes}" z="kFa/cP3E00duvXz4SlX087kz+iw=">
         <table:table data="${changes}" id="l_net_nat_changer_domain_Change" path="/changes" z="WxJpGb1sgLWrQ2ysaiPClUxFdbU=">
-            <table:column id="c_net_nat_changer_domain_Change_description" property="description"  z="wK7UiiC8lmDwrTv1TXTwx/vM9dI="/>
-            
+            <table:column id="c_net_nat_changer_domain_Change_description" property="description" z="wK7UiiC8lmDwrTv1TXTwx/vM9dI="/>
             <!-- 
-            <table:column id="c_net_nat_changer_domain_Change_addedPerson" property="addedPerson.name" z="jyUevNFvp8NxXUF8sadr966ZXZk="/>
+            <table:column id="c_net_nat_changer_domain_Change_addedPerson" property="addedPerson" z="jyUevNFvp8NxXUF8sadr966ZXZk="/>
              -->
         </table:table>
     </page:list>

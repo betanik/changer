@@ -1,5 +1,6 @@
 package net.nat.changer.domain;
 
+import javax.persistence.CascadeType;
 import javax.persistence.ManyToOne;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
@@ -14,11 +15,8 @@ public class Change {
 
     private String description;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Person addedPerson;
     
-    
-    public void meh() {
-    	
-    }
+
 }

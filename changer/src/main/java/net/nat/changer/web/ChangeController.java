@@ -15,5 +15,4 @@ public class ChangeController {
     public Change initializeChange() {
         return new Change();
     }
-    
 }

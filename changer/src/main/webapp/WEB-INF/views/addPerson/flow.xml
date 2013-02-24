@@ -5,7 +5,6 @@
 
 	<on-start>
 		<evaluate expression="changeController.initializeChange()" result="flowScope.change"></evaluate>
-		<evaluate expression="personController.initializePerson()" result="flowScope.person"></evaluate>
 	</on-start>
 
     <!-- A sample view state -->
@@ -17,9 +16,12 @@
     </view-state>
 
     <view-state id="enterPersonDetails" view="addPerson/enterPersonDetails" model="flowScope.person">
+    	<on-entry>
+    		<evaluate expression="personController.initializePerson()" result="flowScope.person"></evaluate>
+    	</on-entry>
     	<transition on="cancel" to="end-state"/>
     	<transition to="reviewChanges" on="proceed">
-    		<evaluate expression="flowScope.change.addedPerson = flowScope.person"></evaluate>    	     		 
+    		<evaluate expression="flowScope.change.addedPerson = flowScope.person"></evaluate>
     	</transition>
     </view-state>
 
@@ -29,6 +31,8 @@
     <end-state id="end-state" view="addPerson/end-state"/>
 	
     <view-state id="reviewChanges" view="addPerson/reviewChanges" model="flowScope.change">
-    	<transition to="end-state" on="submit"></transition>
+    	<transition to="end-state" on="submit">
+			<evaluate expression="flowScope.change.persist()"></evaluate>
+    	</transition>
     </view-state>
 </flow>

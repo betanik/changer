@@ -43,3 +43,4 @@ focus --class ~.domain.Change
 field reference --fieldName addedPerson --type ~.domain.Person --cardinality MANY_TO_ONE
 field reference --fieldName addedPerson --type ~.domain.Person --cardinality MANY_TO_ONE
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-02-23 19:37:02
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-02-24 09:13:03
